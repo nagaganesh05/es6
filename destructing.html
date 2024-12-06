@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // destructing in objects
+        const obj = {
+            name: "ganesh",
+            age: 22,
+            gender: "male",
+            education: {
+                schl: "celestial high school",
+                inte: "sri chaitanya junior college",
+                clg: {
+                    btech: "malla reddy institute of engineering and technology"
+                }
+            }
+        }
+
+        const { name, age, gender } = obj
+        console.log(name)
+        console.log(age)
+        console.log(gender)
+
+        const { education: { schl: schl_1 } } = obj
+        console.log(schl_1)
+
+        const { schl, inte } = obj.education
+        console.log(schl)
+        console.log(inte)
+
+        const { btech } = obj.education.clg
+        console.log(btech)
+
+        //example 2 
+
+        const obj1 = {
+            name1: "ganesh",
+            age1: 22,
+            education1: {
+                intermediate: 93,
+                btech1: 70
+            }
+        }
+
+        const { name1, age1, education1 } = obj1
+        console.log(name1)
+        console.log(age1)
+        console.log(education1)
+
+        const { intermediate, btech1 } = obj1.education1
+        console.log(intermediate)
+        console.log(btech1)
+
+        const { education1: { intermediate: inter1, btech1: btech2 } } = obj1
+        console.log(inter1)
+        console.log(btech2)
+
+
+
+
+
+
+
+        //  destructing in array
+
+        const arr = [1, 2, [3, 4, 5]]
+        const [a, b, [...rest]] = arr;
+        console.log(a)
+        console.log(b)
+        console.log(rest)
+
+
+
+        // set 
+
+        // const arr = ["ganesh", "naga ganesh", "ganesh"];
+        // const newArr = new Set(arr);
+        // console.log(newArr)
+
+
+    </script>
+</body>
+
+</html>
